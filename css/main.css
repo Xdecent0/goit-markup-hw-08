@@ -312,7 +312,24 @@ button:hover, button:focus {
   margin-left: auto;
   margin-right: auto;
   padding: 0 15px;
-  width: 1200px;
+}
+
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .container {
+    width: calc(480px - 18px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .container {
+    width: calc(768px - 18px);
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: calc(1200px - 18px);
+  }
 }
 
 .section {
