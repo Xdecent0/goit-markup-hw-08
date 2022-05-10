@@ -1,0 +1,310 @@
+.hero {
+    background-color: $footer-background-color;
+    padding-top: 200px;
+    padding-bottom: 200px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.18;
+    height: 600px;
+    width: 1600px;
+    margin: 0 auto;
+
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url(../images/herobackground.jpg);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.hero__title {
+    font-weight: 900;
+    font-size: 44px;
+    line-height: 1.36;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+    color: $primary-background-color;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.hero__button {
+    margin-top: 45px;
+    display: inline-block;
+    padding: 10px 32px;
+    border-radius: 4px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    letter-spacing: 0.06em;
+    font-family: inherit;
+    text-decoration: none;
+    text-align: center;
+    color: $primary-background-color;
+    background-color: $hover-text-color;
+
+    transition-property: color, background-color,
+    box-shadow;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-function;
+
+    &:hover,&:focus {
+        background-color: $hover-background-color;
+    }
+}
+
+.backdrop {
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+
+    &.is-hidden .data-modal{
+        transform: translateX(-100vh);
+    }
+}
+
+
+.is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition-property: opacity;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-function;
+}
+
+.data-modal {
+    padding: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    width: 528px;
+    max-width: 100%;
+    max-height: 100%;
+    background: $primary-background-color;
+    box-shadow: 0px 1px 3px rgba(0, 0 , 0 , .12),
+    0px 1px 1px rgba(0 ,0, 0 , .14),
+    0px 2px 1px rgba(0, 0, 0 , .2);
+    border-radius: 4px;
+    transition-property: transform;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-function;
+}
+
+.data-modal__close-button {
+    transition-property: color, background-color, box-shadow;
+    transition-duration: $animation-duration;
+    transition-timing-function: $animation-function;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    background-color: $primary-background-color;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    fill: currentColor;
+    cursor: pointer;
+
+    &:hover,&:focus {
+        background-color: $primary-background-color;
+    }
+    &:hover > .data-modal__close-icon,
+    &:focus > .data-modal__close-icon{
+        fill: $hover-text-color;
+    }
+}
+
+.data-modal__close-icon {
+    fill: $icon-close-color;
+    width: 100%;
+    height: 100%;
+}
+
+.data-modal__title {
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $additional-text-color;
+}
+
+.modal-form__list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.modal-form__item {
+    position: relative;
+
+    &:not(:last-child){
+        margin-bottom: 28px;
+    }
+}
+
+.textfield {
+    padding: 12px 18px 12px 42px;
+    width: 448px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    outline: none;
+    letter-spacing: 0.01em;
+    line-height: 1.15;
+    color: $primary-text-color;
+
+    &:focus,&:hover {
+        border: 1px solid $hover-text-color;
+        outline: none;
+    }
+    &:focus ~.modal-form__icon,
+    &:hover ~.modal-form__icon{
+        fill: $hover-text-color;
+    }
+}
+
+.modal-form__label {
+    position: absolute;
+    display: block;
+    top: -18px;
+    left: 1px;
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+    transition: all $animation-duration $animation-function;
+}
+
+.modal-form__icon {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    fill: $additional-text-color;
+}
+
+.comment-field {
+    position: relative;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.comment-field__label {
+    display: flex;
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: $primary-text-color;
+}
+
+.comment {
+    height: 100%;
+    resize: none;
+    padding: 12px 16px;
+    border: 1px solid;
+    border-radius: 4px;
+    border-color: rgba(33, 33, 33, 0.2);
+    cursor: pointer;
+
+    &:focus,&:hover {
+        border: 1px solid $hover-text-color;
+        outline: none;
+    }
+
+    &::placeholder {
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+}
+
+.modal-form__consent {
+    display: flex;
+    align-items: center;
+    max-width: 425px;
+    margin-bottom: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    line-height: 1.71;
+    color: $primary-text-color;
+}
+
+.modal-form__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+
+    &:checked + .modal-form__checkbox-icon{
+        border-color: transparent;
+        background-color: $hover-background-color;
+        fill: $primary-background-color;
+        background-image: url(../images/Modal-window/icon-check.svg);
+        background-size: contain;
+        background-origin: border-box;
+    }
+}
+
+.modal-form__checkbox-icon {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    border: 2px solid;
+    border-color: $additional-text-color;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all $animation-duration $animation-function;
+}
+
+.modal-form__text-privacy {
+    font-size: 14px;
+    line-height: 1.71;
+    color: $primary-text-color;
+}
+
+.modal-form__link {
+    color: $hover-text-color;
+    text-decoration: underline;
+}
+
+.modal-form__link-button {
+    border: 1px solid transparent;
+    padding: 10px 32px;
+    min-width: 210px;
+    min-height: 50px;
+    box-shadow: 0px 4px 4px rgba(0 ,0 , 0 , .15);
+    border-radius: 4px;
+    cursor: pointer;
+    color: $primary-background-color;
+    background-color: $hover-text-color;
+    outline: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-decoration: none;
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    &:focus,&:hover {
+        background-color: $hover-background-color;
+    }
+}
