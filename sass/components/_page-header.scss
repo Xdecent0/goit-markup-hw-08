@@ -8,7 +8,6 @@ border-bottom: 1px solid $border-header-color;
     margin-left: auto;
     margin-right: auto;
     padding: 0 15px;
-    width: 1200px;
 }
 
 .logo {
@@ -26,6 +25,10 @@ border-bottom: 1px solid $border-header-color;
 .site-nav {
     display: flex;
     margin-left: 92px;
+    @media screen and (max-width: 767px) 
+    {
+        display: none;
+    }
 }
 
 .site-nav__item {
@@ -71,6 +74,10 @@ border-bottom: 1px solid $border-header-color;
 .contacts-nav {
     display: flex;
     margin-left: auto;
+    @media screen and (max-width: 767px) {
+    display: none;
+    }
+
 }
 
 .contacts-nav__item + .contacts-nav__item {
