@@ -1,5 +1,15 @@
+.information-section {
+    padding-top: 60px;
+    padding-bottom: 30px;
+}
+
 .information-section__list {
-    display: flex;
+    // display: flex;
+}
+
+.information-section__item {
+    display: block;
+    margin-bottom: 30px;
 }
 
 .section-sorting__item {
