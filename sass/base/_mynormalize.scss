@@ -47,20 +47,6 @@ button {
 .container {
     width: 100%;
     padding: 0 15px;
-    display:flex;
-        @media screen and (min-width: 480px)
-            {
-                width: 480px;
-                margin: 0 auto;
-            }
-        @media screen and (min-width: 768px) and (max-width: 1199px)
-        {
-        width: calc(768px - 18px);
-        }
-        @media screen and (min-width: 1200px)
-        {
-            width: calc(1200px - 18px);
-        }
 }
 
 .section {

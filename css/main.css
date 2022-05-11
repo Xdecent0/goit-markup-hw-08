@@ -311,28 +311,6 @@ button:hover, button:focus {
 .container {
   width: 100%;
   padding: 0 15px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-@media screen and (min-width: 480px) {
-  .container {
-    width: 480px;
-    margin: 0 auto;
-  }
-}
-
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .container {
-    width: calc(768px - 18px);
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .container {
-    width: calc(1200px - 18px);
-  }
 }
 
 .section {
@@ -531,7 +509,6 @@ button:hover, button:focus {
 }
 
 .hero__button {
-  margin-top: 45px;
   display: inline-block;
   padding: 10px 32px;
   border-radius: 4px;
@@ -878,7 +855,6 @@ button:hover, button:focus {
 }
 
 .information-section__item {
-  display: block;
   margin-bottom: 30px;
 }
 
@@ -899,8 +875,7 @@ button:hover, button:focus {
   margin-bottom: 30px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  width: 270px;
-  height: 120px;
+  padding: 25px;
 }
 
 .information-section__title {
@@ -911,6 +886,7 @@ button:hover, button:focus {
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: #212121;
+  text-align: center;
 }
 
 .information-section__icon {
