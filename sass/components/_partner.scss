@@ -6,29 +6,12 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $additional-text-color;
-    margin: 0px;
-    margin-bottom: 50px;
-}
-.partner-section {
-    @media screen and (max-width: 380px) 
-        {
-            padding: 0px;
-            padding-bottom: 35px;
-        }
 }
 
 .partner-section__list {
     display: flex;
-    flex-wrap: wrap;
-    margin-top: calc(-1 * 30px);
-    margin-left: calc(-1 * 30px);
-}
-
-.partner-section__item {
-    margin: 30px 0 0 30px;
-    flex-basis: calc(100% / 2 - 30px);
-    height: calc(100% / 3 - 30px);
-
+    justify-content: space-between;
+    list-style: none;
 }
 
 .partner-section__link {
@@ -37,6 +20,7 @@
     transition-timing-function: $animation-function;
 
     display: flex;
+    width: 170px;
     height: 90px;
     border: 1px solid $icon-fill-color;
     border-radius: 4px;

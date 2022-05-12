@@ -21,42 +21,24 @@
         <a href="index.html" class="logo">
           <span class="logo__text">Web</span>Studio</a
         >
-        <button
-          type="button"
-          class="mobile-button"
-          aria-expanded="false"
-          aria-controls="menu-container"
-          data-menu-button
-        >
-          <svg
-            width="40"
-            height="40"
-            aria-label="Переключатель мобильного меню"
-            class="mobile-button__icon"
-          >
-            <use class="icon-cross" href="./images/logo/close.svg"></use>
-            <use class="icon-menu" href="./images/logo/menu.svg"></use>
-          </svg>
-        </button>
         <!-- Навигация -->
-        <div class="menu-container" id="menu-container" data-menu>
-          <!-- Меню в хедере -->
-          <nav>
-            <ul class="menu">
-              <li class="menu__item">
-                <a href="./index.html" class="menu__link menu__link--current">Студия</a>
-              </li>
-              <li class="menu__item">
-                <a href="./portfolio.html" class="menu__link">Портфолио</a>
-              </li>
-              <li class="menu__item">
-                <a href="#" class="menu__link">Контакты</a>
-              </li>
-            </ul>
-          </nav>
-
+        <nav>
+          <!-- Список навигации сайта -->
+          <ul class="site-nav">
+            <li class="site-nav__item">
+              <a href="index.html" class="site-nav__link site-nav__link--active"
+                >Студия</a
+              >
+            </li>
+            <li class="site-nav__item">
+              <a href="portfolio.html" class="site-nav__link">Портфолио</a>
+            </li>
+            <li class="site-nav__item">
+              <a href="" class="site-nav__link">Контакты</a>
+            </li>
+          </ul>
+        </nav>
         <!-- Список навигации контактов -->
-        <div class="contacts-container">
         <ul class="contacts-nav">
           <li class="contacts-nav__item">
             <a class="contacts-nav__mail-link" href="mailto:info@devstudio.com">
@@ -75,19 +57,12 @@
             >
           </li>
         </ul>
-        <ul class="menu-social">
-          <li class="menu-social__item"><a class="menu-social__link" href="">Instagram</a></li>
-          <li class="menu-social__item"><a class="menu-social__link" href="">Twitter</a></li>
-          <li class="menu-social__item"><a class="menu-social__link" href="">Facebook</a></li>
-          <li class="menu-social__item"><a class="menu-social__link" href="">Linkedin</a></li>
-        </ul>
-        </div>
       </div>
     </header>
     <main>
       <!-- Герой -->
       <section class="hero overlay">
-        <div class="container hero__container">
+        <div class="container">
           <h1 class="hero__title">Эффективные решения для вашего бизнеса</h1>
           <button type="button" class="hero__button" data-modal-open>
             Заказать услугу
@@ -283,8 +258,8 @@
       </section>
       <!-- Наша команда -->
       <section class="team-section section">
-        <h2 class="team-section__title">Наша команда</h2>
         <div class="container">
+          <h2 class="team-section__title">Наша команда</h2>
           <ul class="team-section__list">
             <li class="team-section__item">
               <img
@@ -490,8 +465,8 @@
         </div>
       </section>
       <section class="section partner-section">
-        <h2 class="partner-section__title">Постоянные клиенты</h2>
         <div class="container">
+          <h2 class="partner-section__title">Постоянные клиенты</h2>
           <ul class="partner-section__list">
             <li class="partner-section__item">
               <a href="" class="partner-section__link"
@@ -645,7 +620,6 @@
         </div>
       </div>
     </footer>
-    <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>
 </html>
