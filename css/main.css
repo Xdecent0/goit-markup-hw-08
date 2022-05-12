@@ -314,6 +314,14 @@ button:hover, button:focus {
   max-width: 480px;
 }
 
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
 .section {
   padding: 60px 0;
 }
@@ -379,6 +387,13 @@ button:hover, button:focus {
   color: #2196f3;
 }
 
+@media screen and (min-width: 768px) {
+  .logo {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+}
+
 .menu__link {
   font-weight: 500;
   font-size: 40px;
@@ -399,6 +414,31 @@ button:hover, button:focus {
 
 .menu__link:hover, .menu__link:focus {
   color: #2196f3;
+}
+
+@media screen and (min-width: 768px) {
+  .menu__link {
+    position: relative;
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu__link--current::after {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    content: '';
+    background-color: #2196f3;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -433,6 +473,13 @@ button:hover, button:focus {
   fill: #2196f3;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .contacts-nav__mail-link, .contacts-nav__phone-link {
+    font-size: 12px;
+    line-height: 1.16;
+  }
+}
+
 .contacts-nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -442,6 +489,12 @@ button:hover, button:focus {
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
   margin-bottom: 64px;
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-nav {
+    display: block;
+  }
 }
 
 .contacts-nav__mail-icon {
@@ -476,6 +529,12 @@ button:hover, button:focus {
 
 .mobile-button {
   z-index: 2;
+}
+
+@media screen and (min-width: 768px) {
+  .mobile-button {
+    display: none;
+  }
 }
 
 .mobile-button .icon-cross {
@@ -524,6 +583,25 @@ button:hover, button:focus {
           justify-content: space-between;
 }
 
+@media screen and (min-width: 768px) {
+  .menu-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-left: 90px;
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .menu-container > nav {
+    display: block;
+  }
+}
+
 .contacts-nav__item:last-child {
   margin-bottom: 32px;
   font-size: 34px;
@@ -531,11 +609,28 @@ button:hover, button:focus {
   letter-spacing: 0.02em;
 }
 
+@media screen and (min-width: 768px) {
+  .contacts-nav__item:first-child {
+    margin-bottom: 10px;
+  }
+}
+
 .menu__item:not(:last-child) {
   margin-bottom: 32px;
 }
 
-.menu-social {
+@media screen and (min-width: 768px) {
+  .menu__item:not(:last-child) {
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+}
+
+.menu-container .menu-social {
+  display: none;
+}
+
+.is-open .menu-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -545,6 +640,32 @@ button:hover, button:focus {
   margin-right: 10px;
   padding-right: 10px;
   border-right: 1px solid rgba(33, 33, 33, 0.2);
+}
+
+.menu-social__link {
+  color: #2196f3;
+  font-size: 18px;
+  line-height: 1.22;
+}
+
+@media screen and (min-width: 768px) {
+  .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .contacts-container {
+    margin: 19px 0;
+  }
+}
+
+.is-open .contacts__item:not(:last-child) .contacts__link {
+  font-size: 24px;
+  line-height: 1.16;
+  letter-spacing: 0.02em;
 }
 
 .hero {
@@ -646,7 +767,6 @@ button:hover, button:focus {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
           transform: translateX(-50%) translateY(-50%);
-  width: 528px;
   max-width: 100%;
   max-height: 100%;
   background: #ffffff;
@@ -734,7 +854,6 @@ button:hover, button:focus {
 
 .textfield {
   padding: 12px 18px 12px 42px;
-  width: 448px;
   height: 40px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -926,6 +1045,17 @@ button:hover, button:focus {
   background-color: #188ce8;
 }
 
+.modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
 .information-section {
   padding: 60px 0;
 }
@@ -973,7 +1103,6 @@ button:hover, button:focus {
 }
 
 .information-section__text {
-  min-width: 270px;
   font-weight: 400;
   font-size: 14px;
   line-height: 1.71;
