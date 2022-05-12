@@ -1,15 +1,11 @@
-/* Цвета текста */
-$primary-text-color: #757575;
-$additional-text-color: #212121;
-$hover-text-color: #2196f3;
-$hover-background-color:#188ce8;
-/* Цвета фона */
-$primary-background-color: #ffffff;
-$additional-background-color: #f5f4fa;
-$footer-background-color: #2f303a;
-$border-header-color: #ececec;
-$icon-fill-color: #afb1b8;
-$icon-close-color: #000000;
-// Анимации
-$animation-duration: 250ms;
-$animation-function: cubic-bezier(0.4, 0, 0.2, 1);
+$color-text: #757575;
+$color-title: #212121;
+$color-accent: #2196f3;
+$color-main: #ffffff;
+$color-footer: #2f303a;
+$color-background: #f5f4fa;
+$partners-color: #afb1b8;
+$time-hover: 250ms;
+$cubic-for-all: cubic-bezier(0.4, 0, 0.2, 1);
+$main-font-family: "Roboto", sans-serif;
+$logo-font-family: "Raleway", sans-serif;
