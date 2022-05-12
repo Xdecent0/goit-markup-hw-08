@@ -1,7 +1,6 @@
 .team-section {
     background-color: $additional-background-color;
-    padding-top: 60px;
-    padding-bottom: 35px;
+    padding: 60px 0;
 }
 
 .team-section__title {
@@ -17,9 +16,8 @@
 }
 
 .team-section__list {
-    justify-content: center;
-    // display: flex;
-    // list-style: none;
+    max-width: 450px;
+    margin: 0 auto;
 }
 
 .team-section__item {

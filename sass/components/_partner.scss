@@ -18,9 +18,17 @@
 }
 
 .partner-section__list {
-    @media screen and (max-width: 380px){
-            display: block;
-        }
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: calc(-1 * 30px);
+    margin-left: calc(-1 * 30px);
+}
+
+.partner-section__item {
+    margin: 30px 0 0 30px;
+    flex-basis: calc(100% / 2 - 30px);
+    height: calc(100% / 3 - 30px);
+
 }
 
 .partner-section__link {
@@ -29,7 +37,6 @@
     transition-timing-function: $animation-function;
 
     display: flex;
-    width: 170px;
     height: 90px;
     border: 1px solid $icon-fill-color;
     border-radius: 4px;

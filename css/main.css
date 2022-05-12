@@ -309,12 +309,13 @@ button:hover, button:focus {
 }
 
 .container {
-  width: 100%;
   padding: 0 15px;
+  margin: 0 auto;
+  max-width: 480px;
 }
 
 .section {
-  padding: 94px 0;
+  padding: 60px 0;
 }
 
 .visually-hidden {
@@ -337,7 +338,7 @@ button:hover, button:focus {
 
 @media screen and (max-width: 767px) {
   .header {
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     background-color: #ffffff;
@@ -510,7 +511,25 @@ button:hover, button:focus {
 }
 
 .menu-container.is-open {
-  display: block;
+  position: fixed;
+  z-index: -1;
+  overflow-y: scroll;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 169px 40px;
+  overflow-y: scroll;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (max-width: 767px) {
@@ -905,12 +924,13 @@ button:hover, button:focus {
 }
 
 .information-section {
-  padding-top: 60px;
-  padding-bottom: 30px;
+  padding: 60px 0;
 }
 
-.information-section__item {
-  margin-bottom: 30px;
+@media screen and (max-width: 768px) {
+  .information-section__item:not(:first-child) {
+    margin-top: 30px;
+  }
 }
 
 .section-sorting__item:not(:last-child) {
@@ -1003,8 +1023,7 @@ button:hover, button:focus {
 
 .team-section {
   background-color: #f5f4fa;
-  padding-top: 60px;
-  padding-bottom: 35px;
+  padding: 60px 0;
 }
 
 .team-section__title {
@@ -1020,9 +1039,8 @@ button:hover, button:focus {
 }
 
 .team-section__list {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  max-width: 450px;
+  margin: 0 auto;
 }
 
 .team-section__item {
@@ -1123,10 +1141,21 @@ button:hover, button:focus {
   }
 }
 
-@media screen and (max-width: 380px) {
-  .partner-section__list {
-    display: block;
-  }
+.partner-section__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: calc(-1 * 30px);
+  margin-left: calc(-1 * 30px);
+}
+
+.partner-section__item {
+  margin: 30px 0 0 30px;
+  -ms-flex-preferred-size: calc(100% / 2 - 30px);
+      flex-basis: calc(100% / 2 - 30px);
+  height: calc(100% / 3 - 30px);
 }
 
 .partner-section__link {
@@ -1139,7 +1168,6 @@ button:hover, button:focus {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 170px;
   height: 90px;
   border: 1px solid #afb1b8;
   border-radius: 4px;

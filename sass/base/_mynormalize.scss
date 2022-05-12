@@ -45,12 +45,13 @@ button {
 }
 
 .container {
-    width: 100%;
     padding: 0 15px;
+    margin: 0 auto;
+    max-width: 480px;
 }
 
 .section {
-    padding: 94px 0;
+    padding: 60px 0;
 }
 
 .visually-hidden {

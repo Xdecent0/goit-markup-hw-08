@@ -1,15 +1,18 @@
 .information-section {
-    padding-top: 60px;
-    padding-bottom: 30px;
+    padding: 60px 0;
 }
 
 .information-section__list {
     // display: flex;
 }
 
-.information-section__item {
-    margin-bottom: 30px;
+.information-section__item:not(:first-child) {
+    @media screen and (max-width: 768px) 
+    {
+    margin-top: 30px;
+    }
 }
+
 
 .section-sorting__item {
     &:not(:last-child){

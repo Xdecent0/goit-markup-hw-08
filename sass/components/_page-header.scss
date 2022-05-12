@@ -1,7 +1,7 @@
 .header {
 border-bottom: 1px solid $border-header-color;
 @media screen and (max-width: 767px) {
-        position: fixed;
+        position: relative;
         top: 0;
         width: 100%;
         background-color: $primary-background-color;
@@ -155,7 +155,18 @@ border-bottom: 1px solid $border-header-color;
     z-index: 1;
 }
     &.is-open {
-    display: block;
+    position: fixed;
+        z-index: -1;
+        overflow-y: scroll;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        padding: 169px 40px;
+        overflow-y: scroll;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
 }
 
